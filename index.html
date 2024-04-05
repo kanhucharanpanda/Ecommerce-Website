@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE store</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- font awesome cdn lik -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- custom css file link -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> electroKart </a>
+
+        <nav class="navbar">
+            <a href="#home">home></a>
+            <a href="#features">features></a>
+            <a href="#products">products></a>
+            <a href="#categories">categories></a>
+            <a href="#review">review></a>
+            <a href="#blogs">blogs></a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="searchInput" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- shopping Cart -->
+        <div class="shopping-cart">
+            <div class="cart">
+                <ol id="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                </ol>
+                <h1>Total:   ₹<span id="cart-total" class="carttl">0</span></h1>
+                <button onclick="clearCart()" class="btn">clear cart</button>
+            </div>
+             <a href="#" class="btn">checkout</a>
+        </div>
+
+        <!-- login form -->
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>forget your password <a href="#">click here</a></p>
+            <p>don't have an account <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+    </header>
+
+    <!-- header sectin ends -->
+    <!-- home seection starts -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>best and <span>desgined</span> product</h3>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe optio quia vero exercitationem alias ab!</p>
+            <p>we wellcome to our <span>E-COMMERCE</span> store....</p>
+            <a href="#products" class="btn">shop now</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+<!-- features section starts -->
+
+<section class="features" id="features">
+
+    <h1 class="heading"> our <span>feature</span></h1>
+    <div class="box-container">
+        
+        <div class="box">
+            <img src="/laptop.jpg" alt="">
+            <h3>new laptop</h3>
+            <p>the product for the student only</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="/mobile.jpg" alt="">
+            <h3>free delivery</h3>
+            <p>the product for the student only</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="/tab.jpg" alt="">
+            <h3>easy payment</h3>
+            <p>the product for the student only</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- features section ends -->
+
+<!-- product section start -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> our <span>products</span></h1>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="/macbook.jpg" alt="">
+                <h3>macbook</h3>
+                <div class="price"> ₹99900.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('apple macbook air', 99900.00, '/project_pic/macbook.png')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/tab.jpg" alt="">
+                <h3>ipad pro</h3>
+                <div class="price"> ₹81900.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('apple ipad pro 5G', 81900.00, '/project_pic/ipad.png')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/iphone14pro.jpg" alt="">
+                <h3>iphone 14 pro</h3>
+                <div class="price"> ₹129900.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('apple iphone 14 pro', 129900.00, '/project_pic/iphone.png')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/apple watch ultra.jpg" alt="">
+                <h3>apple watch ultra</h3>
+                <div class="price"> ₹89900.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('apple watch ultra', 89900.00, '/project_pic/aplewatch.png')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/apple airpods pro.png" alt="">
+                <h3>apple air pods pro</h3>
+                <div class="price"> ₹26900.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('apple air pods pro', 26900.00, '/project_pic/applepods.png')">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="/galaxy s22ultra.jpg" alt="">
+                <h3>galaxy book 3 360</h3>
+                <div class="price"> ₹138990.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('galaxy book 3 360', 138990.00, '/project_pic/sambook3.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="tab.jpg" width="300px" alt="">
+                <h3>galaxy tab s9 ultra</h3>
+                <div class="price"> ₹108999.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('galaxy tab s9 ultra', 108999.00, '/project_pic/Samtabs9.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/galaxy s22ultra.jpg" alt="">
+                <h3>galaxy s22 ultra</h3>
+                <div class="price"> ₹99999/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('galaxy s22 ultra 5G', 99999, '/project_pic/sams22.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="/galaxy watch 6.jpg" alt="">
+                <h3>galaxy watch 6</h3>
+                <div class="price"> ₹32999.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('galaxy watch 6 wifi', 32999.00, '/project_pic/samwatch.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="galaxy burds pro 2.webp" alt="">
+                <h3>galaxy buds pro 2</h3>
+                <div class="price"> ₹15990.00/- </div>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <button class="btn" onclick="addToCart('galaxy buds pro 2', 15990.00, '/project_pic/sambuds.jpg')">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- product section ends -->
+
+<!-- categories section starts -->
+
+<section class="categories" id="categories">
+
+    <h1 class="heading"> product <span>categories</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="/apple2.webp" alt="apple product">
+            <h3>apple</h3>
+            <p>upto 10% off</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+        <div class="box">
+            <img src="/samsung.avif" width="200px" alt="samsung product">
+            <h3>samsung</h3>
+            <p>upto 10% off</p>
+            <a href="#" class="btn">shop now</a>
+            
+        </div>
+
+        <div class="box">
+            <img src="/google.webp" alt="google product">
+            <h3>google</h3>
+            <p>upto 10% off</p>
+            <a href="#" class="btn">shop now</a>
+            
+        </div>
+
+        <div class="box">
+            <img src="/project_pic/mix.jpg" alt="other">
+            <h3>other</h3>
+            <p>upto 10% off</p>
+            <a href="#" class="btn">shop now</a>
+            
+        </div>
+
+    </div>
+
+</section>
+
+<!-- categories section starts -->
+<!-- review section starts -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span></h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="" alt="review 1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis illo vero aliquid cumque, voluptates beatae praesentium deserunt a quam.</p>
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="" alt="review 2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis illo vero aliquid cumque, voluptates beatae praesentium deserunt a quam.</p>
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <!-- <i class="fas fa-star"></i> -->
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="" alt="review 2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis illo vero aliquid cumque, voluptates beatae praesentium deserunt a quam.</p>
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="" alt="review 4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis illo vero aliquid cumque, voluptates beatae praesentium deserunt a quam.</p>
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="" alt="review 4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis illo vero aliquid cumque, voluptates beatae praesentium deserunt a quam.</p>
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- blog section start -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="" alt="blog pics">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 15 aug, 2023 </a>
+                </div>
+                <h3>best product for you people only</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quia.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="" alt="blog pics 1">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 15 aug, 2023 </a>
+                </div>
+                <h3>best product for you people only</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quia.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="" alt="blog pics 2">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 15 aug, 2023 </a>
+                </div>
+                <h3>best product for you people only</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quia.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blog section ends -->
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+        
+        <div class="box">
+            <h3> electro <i class="fas fa-shopping-basket"></i> </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas?</p>
+            <div class="share">
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a class="links"> <i class="fas fa-phone"></i> +918249112345 </a>
+            <a class="links"> <i class="fas fa-phone"></i> +917735706963 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> kanhapanda6963@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> giet, gunupur </a>
+        </div>
+
+        <div class="box">
+            <h3>quick link</h3>
+            <a class="links" href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+            <a class="links" href="#features"> <i class="fas fa-arrow-right"></i> features </a>
+            <a class="links" href="#products"> <i class="fas fa-arrow-right"></i> products </a>
+            <a class="links" href="#categories"> <i class="fas fa-arrow-right"></i> categories </a>
+            <a class="links" href="#review"> <i class="fas fa-arrow-right"></i> review </a>
+            <a class="links" href="#blogs"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for ltest updaate</p>
+                <input type="email" placeholder="your mail" class="email"><br>
+                <input type="submit" value="subscribe" class="btn"><br>
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg" alt="payment types" class="payment-img">
+        </div>
+    </div>
+
+    <div class="credit"> created by:- <span>Kanhu Charan Panda </span>| from GIET University</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- custom js link -->
+<script src="script.js"></script>
+
+</body>
+</html>
